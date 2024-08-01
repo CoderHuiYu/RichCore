@@ -96,9 +96,17 @@ extension UIDevice {
         model.family == .iPad
     }()
     
-    public static var screenWidth: CGFloat = UIScreen.main.bounds.size.width
+    public static var screenWidth: CGFloat {
+        get {
+           return UIScreen.main.bounds.size.width
+        }
+    }
     
-    public static var screenHeight: CGFloat = UIScreen.main.bounds.size.height
+    public static var screenHeight: CGFloat {
+        get {
+            return UIScreen.main.bounds.size.height
+        }
+    }
     
     public static let navigationBarHeight: CGFloat = {
         return UIDevice.isIPad ? 50 : 44
